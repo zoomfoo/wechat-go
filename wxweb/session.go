@@ -167,7 +167,7 @@ func CreateSession(common *Common, handlerRegister *HandlerRegister, qrmode int)
 		km := url.Values{}
 		km.Add("t", "webwx")
 		km.Add("_", strconv.FormatInt(time.Now().Unix(), 10))
-		logs.Info("QrcodeURL: %s", common.LoginUrl+"/qrcode/"+uuid+"?"+km.Encode())
+		session.QrcodePath = common.LoginUrl + "/qrcode/" + uuid + "?" + km.Encode()
 	}
 	return session, nil
 }
