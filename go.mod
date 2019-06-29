@@ -1,4 +1,4 @@
-module github.com/songtianyi/wechat-go
+module github.com/zoombar/wechat-go
 
 require (
 	github.com/PuerkitoBio/goquery v1.4.1 // indirect

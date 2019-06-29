@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/songtianyi/wechat-go.svg?branch=master)](https://travis-ci.org/songtianyi/wechat-go)
 [![Join the chat at https://gitter.im/wechat-go/Lobby](https://badges.gitter.im/wechat-go/Lobby.svg)](https://gitter.im/wechat-go/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Go Report Card](https://goreportcard.com/badge/github.com/songtianyi/wechat-go)](https://goreportcard.com/report/github.com/songtianyi/wechat-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zoombar/wechat-go)](https://goreportcard.com/report/github.com/zoombar/wechat-go)
 [![codebeat badge](https://codebeat.co/badges/4f78bcb2-bf75-477d-a8f4-b09fde3dae80)](https://codebeat.co/projects/github-com-songtianyi-wechat-go-master)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
@@ -23,8 +23,8 @@
 	cd $GOPATH/src/golang.org/x
 	git clone https://github.com/golang/net.git
 
-	go get -u -v github.com/songtianyi/wechat-go
-	cd $GOPATH/src/github.com/songtianyi/wechat-go
+	go get -u -v github.com/zoombar/wechat-go
+	cd $GOPATH/src/github.com/zoombar/wechat-go
 	go get ./...
 
 ## 编译并运行
@@ -58,11 +58,11 @@ package main
 
 import (
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/songtianyi/wechat-go/plugins/wxweb/faceplusplus"
-	"github.com/songtianyi/wechat-go/plugins/wxweb/gifer"
-	"github.com/songtianyi/wechat-go/plugins/wxweb/replier"
-	"github.com/songtianyi/wechat-go/plugins/wxweb/switcher"
-	"github.com/songtianyi/wechat-go/wxweb"
+	"github.com/zoombar/wechat-go/plugins/wxweb/faceplusplus"
+	"github.com/zoombar/wechat-go/plugins/wxweb/gifer"
+	"github.com/zoombar/wechat-go/plugins/wxweb/replier"
+	"github.com/zoombar/wechat-go/plugins/wxweb/switcher"
+	"github.com/zoombar/wechat-go/wxweb"
 )
 
 func main() {
@@ -146,7 +146,7 @@ get config key
 ```
 在代码中使用配置
 ```go
-import "github.com/songtianyi/wechat-go/kv"
+import "github.com/zoombar/wechat-go/kv"
 func demo() {
 	kv.KVStorageInstance.Set("key", "value")
 	v := kv.KVStorageInstance.Get("key")
@@ -168,7 +168,7 @@ package demo // 以插件名命令包名
 
 import (
 	"github.com/songtianyi/rrframework/logs" // 导入日志包
-	"github.com/songtianyi/wechat-go/wxweb"  // 导入协议包
+	"github.com/zoombar/wechat-go/wxweb"  // 导入协议包
 )
 
 // 必须有的插件注册函数

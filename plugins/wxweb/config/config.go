@@ -27,8 +27,8 @@ package config
 
 import (
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/songtianyi/wechat-go/kv"
-	"github.com/songtianyi/wechat-go/wxweb"
+	"github.com/zoombar/wechat-go/kv"
+	"github.com/zoombar/wechat-go/wxweb"
 	"strings"
 )
 
