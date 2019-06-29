@@ -30,14 +30,15 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
 
 	"github.com/mdp/qrterminal"
-	"github.com/songtianyi/rrframework/config"
+	rrconfig "github.com/songtianyi/rrframework/config"
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/songtianyi/rrframework/storage"
+	rrstorage "github.com/songtianyi/rrframework/storage"
 )
 
 const (
@@ -48,6 +49,7 @@ const (
 
 	BACKGROUND_MODE
 	TERMINAL_MODE_GOLAND
+	SIMPLE_MODE
 )
 
 var (
@@ -161,6 +163,11 @@ func CreateSession(common *Common, handlerRegister *HandlerRegister, qrmode int)
 		}
 		session.QrcodePath = "../web/public/qrcode/" + uuid + ".jpg"
 		logs.Info("QrcodePath: %s", session.QrcodePath)
+	} else if qrmode == SIMPLE_MODE {
+		km := url.Values{}
+		km.Add("t", "webwx")
+		km.Add("_", strconv.FormatInt(time.Now().Unix(), 10))
+		logs.Info("QrcodeURL: %s", common.LoginUrl+"/qrcode/"+uuid+"?"+km.Encode())
 	}
 	return session, nil
 }
