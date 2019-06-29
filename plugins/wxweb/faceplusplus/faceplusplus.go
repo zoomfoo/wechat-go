@@ -29,7 +29,7 @@ import (
 	"bytes"
 	"github.com/songtianyi/rrframework/config"
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/zoombar/wechat-go/wxweb"
+	"github.com/zoomfoo/wechat-go/wxweb"
 	"io"
 	"io/ioutil"
 	"mime/multipart"

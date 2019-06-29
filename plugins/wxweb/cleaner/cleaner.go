@@ -28,7 +28,7 @@ package cleaner
 import (
 	"fmt"
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/zoombar/wechat-go/wxweb"
+	"github.com/zoomfoo/wechat-go/wxweb"
 	"math"
 	"strings"
 )

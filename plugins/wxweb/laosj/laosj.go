@@ -28,7 +28,7 @@ package laosj
 import (
 	"github.com/songtianyi/laosj/spider"
 	"github.com/songtianyi/rrframework/logs"
-	"github.com/zoombar/wechat-go/wxweb"
+	"github.com/zoomfoo/wechat-go/wxweb"
 	"io/ioutil"
 	"math/rand"
 	"net/http"

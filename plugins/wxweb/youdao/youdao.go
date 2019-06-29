@@ -28,7 +28,7 @@ package youdao // 以插件名命令包名
 import (
 	"github.com/songtianyi/rrframework/config"
 	"github.com/songtianyi/rrframework/logs" // 导入日志包
-	"github.com/zoombar/wechat-go/wxweb"  // 导入协议包
+	"github.com/zoomfoo/wechat-go/wxweb"  // 导入协议包
 	"io/ioutil"
 	"net/http"
 	"net/url"
